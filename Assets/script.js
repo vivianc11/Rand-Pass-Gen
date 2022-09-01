@@ -1,4 +1,5 @@
-// Assignment code here
+var password = "";
+
 //generating a random character using ASCII
 function getCharacter() {
   var asciiNum = Math.floor((Math.random()* 94)+ 33);
@@ -6,19 +7,18 @@ function getCharacter() {
   return char;
 }
 
+
 function generatePassword() {
-  var password = "";
-  var char = getCharacter();
-  password += char;
+  var userNum = window.prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
+  
+  for (let i = 0; i <= userNum; i++) { 
+    var char = getCharacter();
+    password += char;
+  } return password;
 
-  for (let i = 1; i <= 12; i++) {
-    
   }
-  }
 
 
-
-}
 
 
 // Get references to the #generate element
@@ -34,4 +34,5 @@ function writePassword() {
 }
 
 // Add event listener to generate button
+generateBtn.addEventListener("click", clea)
 generateBtn.addEventListener("click", writePassword);

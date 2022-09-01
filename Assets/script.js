@@ -8,14 +8,22 @@ function getCharacter() {
 }
 
 function generatePassword() {
- 
+  var capChoice = window.prompt ('Would you like your password to have capital letters? (Yes or No)')
+  // var numChoice = window.prompt ('Would you like your password to have numbers? (Yes or No)')
+  // var symbolChoice = window.prompt ('Would you like to your password to have symbols? (Yes or No)')
   var userNum = window.prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
   var password = ""
   for (let i = 1; i <= userNum; i++) { 
     var char = getCharacter();
     password += char;
   }
-  return password;
+  if (capChoice === 'No'){
+    var noCapPass = password.toLowerCase();
+    return noCapPass;
+  } else {
+    return password;
+  }
+  
 }
   
 

@@ -4,9 +4,12 @@ function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numbers = "1234567890";
   var none = "";
-  var capChoice = window.prompt ('Would you like your password to have capital letters? (Yes or No)')
-  var numChoice = window.prompt ('Would you like your password to have numbers? (Yes or No)')
-  var symbolChoice = window.prompt ('Would you like to your password to have symbols? (Yes or No)')
+  var capChoice = window.prompt ('Would you like your password to have capital letters? (Yes or No)');
+  window.alert (`You chose ${capChoice} for capital letters`);
+  var numChoice = window.prompt ('Would you like your password to have numbers? (Yes or No)');
+  window.alert (`You chose ${numChoice} for numbers`);
+  var symbolChoice = window.prompt ('Would you like to your password to have symbols? (Yes or No)');
+  window.alert (`You chose ${symbolChoice} for symbols`);
   var userNum = window.prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
   var options = ""
   var password = ""

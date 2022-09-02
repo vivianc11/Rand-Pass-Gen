@@ -20,7 +20,7 @@ function generatePassword() {
   var numChoice = prompt ('Would you like your password to have numbers? (Yes or No)');
   numChoice = numChoice.toLowerCase();
   while (numChoice != "yes" && numChoice != "no") {
-    capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have numbers? ")
+    numChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have numbers? ")
     numChoice = numChoice.toLowerCase();
   }
       alert (`You chose ${numChoice} for capital letters`);
@@ -29,16 +29,18 @@ function generatePassword() {
   var symbolChoice = prompt ('Would you like to your password to have symbols? (Yes or No)');
   symbolChoice = symbolChoice.toLowerCase();
   while (symbolChoice != "yes" && symbolChoice != "no") {
-    capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have symbols? ")
+    symbolChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have symbols? ")
     symbolChoice = symbolChoice.toLowerCase();
   }
       alert (`You chose ${symbolChoice} for capital letters`);
 
   // Prompting the user for number of characters for the password
   var userNum = prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
+  userNum = parseInt(userNum);
   // While loop to validate that the user enters an integer that is between 8 and 128
-  while (!parseInt(userNum) || userNum < 8 || userNum > 128) {
+  while (!(Number.isInteger(userNum)) || userNum < 8 || userNum > 128) {
     userNum = prompt("That is an INVALID input. Please answer with a number between 8 - 128")
+    userNum = parseInt(userNum);
   }
   // Creating empty strings for options and password variable
   var options = ""

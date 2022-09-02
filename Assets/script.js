@@ -40,6 +40,10 @@ function generatePassword() {
   // While loop to validate that the user enters an integer that is between 8 and 128
   while (!(Number.isInteger(userNum)) || userNum < 8 || userNum > 128) {
     userNum = prompt("That is an INVALID input. Please answer with a number between 8 - 128")
+    if (userNum === null){
+      userNum = 0;
+      break;
+    }
     userNum = parseInt(userNum);
   }
   // Creating empty strings for options and password variable
@@ -79,7 +83,7 @@ function generatePassword() {
 
   // For loop that takes however many character the user wants and
   // only makes a password up to that many characters
-  for (let i = 0; i <= userNum; i++) {
+  for (let i = 0; i < userNum; i++) {
     var char = getCharacter();
     password += char;
     

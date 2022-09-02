@@ -7,27 +7,24 @@ function generatePassword() {
 
   var capChoice = prompt ('Would you like your password to have capital letters? (Yes or No)');
   capChoice = capChoice.toLowerCase();
-  if (!capChoice.includes('yes', 'no')) {
-    alert (`You chose ${capChoice}. This is not a valid input, default is set to No`)
-  } else {
-    alert (`You chose ${capChoice} for capital letters`);
+  while (capChoice != "yes" && capChoice != "no") {
+    capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have capital letters? ")
   }
-
+      alert (`You chose ${capChoice} for capital letters`);
+  
   var numChoice = prompt ('Would you like your password to have numbers? (Yes or No)');
   numChoice = numChoice.toLowerCase();
-  if (!numChoice.includes('yes', 'no')) {
-    alert (`You chose ${numChoice}. This is not a valid input, default is set to No`)
-  } else {
-    alert (`You chose ${numChoice} for capital letters`);
+  while (numChoice != "yes" && numChoice != "no") {
+    capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have numbers? ")
   }
+      alert (`You chose ${numChoice} for capital letters`);
 
   var symbolChoice = prompt ('Would you like to your password to have symbols? (Yes or No)');
   symbolChoice = symbolChoice.toLowerCase();
-  if (!symbolChoice.includes('yes', 'no')) {
-    alert (`You chose ${symbolChoice}. This is not a valid input, default is set to No`)
-  } else {
-    alert (`You chose ${symbolChoice} for capital letters`);
+  while (symbolChoice != "yes" && symbolChoice != "no") {
+    capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have symbols? ")
   }
+      alert (`You chose ${symbolChoice} for capital letters`);
 
   var userNum = prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
   var options = ""

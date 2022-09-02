@@ -9,6 +9,7 @@ function generatePassword() {
   capChoice = capChoice.toLowerCase();
   while (capChoice != "yes" && capChoice != "no") {
     capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have capital letters? ")
+    capChoice = capChoice.toLowerCase();
   }
       alert (`You chose ${capChoice} for capital letters`);
   
@@ -16,6 +17,7 @@ function generatePassword() {
   numChoice = numChoice.toLowerCase();
   while (numChoice != "yes" && numChoice != "no") {
     capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have numbers? ")
+    numChoice = numChoice.toLowerCase();
   }
       alert (`You chose ${numChoice} for capital letters`);
 
@@ -23,6 +25,7 @@ function generatePassword() {
   symbolChoice = symbolChoice.toLowerCase();
   while (symbolChoice != "yes" && symbolChoice != "no") {
     capChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have symbols? ")
+    symbolChoice = symbolChoice.toLowerCase();
   }
       alert (`You chose ${symbolChoice} for capital letters`);
 

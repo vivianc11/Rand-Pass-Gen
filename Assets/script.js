@@ -23,7 +23,7 @@ function generatePassword() {
     numChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have numbers? ")
     numChoice = numChoice.toLowerCase();
   }
-      alert (`You chose ${numChoice} for capital letters`);
+      alert (`You chose ${numChoice} for numbers`);
 
   // Prompting the user to ask for inclusion of symbols
   var symbolChoice = prompt ('Would you like to your password to have symbols? (Yes or No)');
@@ -32,7 +32,7 @@ function generatePassword() {
     symbolChoice = prompt ("That is an INVALID input. Please answer with a Yes or No. Would you like your password to have symbols? ")
     symbolChoice = symbolChoice.toLowerCase();
   }
-      alert (`You chose ${symbolChoice} for capital letters`);
+      alert (`You chose ${symbolChoice} for symbols`);
 
   // Prompting the user for number of characters for the password
   var userNum = prompt('How many characters do you want your password to have? Choose a number between 8 - 128');
